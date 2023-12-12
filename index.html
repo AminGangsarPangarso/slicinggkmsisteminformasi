@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>document.documentElement.classList.add('js')</script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        ungu: '#4d0b9a',
+                        Dear: '#713cae',
+                    },
+                    fontFamily: {
+                        poppins: 'Poppins',
+                    }
+
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <title>slicing gkm 2023</title>
+</head>
+
+<body class="">
+    <div class="bg-ungu">
+        <nav class="relative px-4 py-4 flex justify-between items-center  container mx-auto px-8 py-8  ">
+            <a class="text-3xl font-bold leading-none" href="#">
+                <img src="./asset/image/logosi.png" alt="" class="animate-fade-up">
+            </a>
+            <div class="lg:hidden">
+                <button class="navbar-burger flex items-center text-white text-blue-600 p-3">
+                    <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Mobile menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg>
+                </button>
+            </div>
+            <ul
+                class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+                <li><a class="text-sm text-gray-400 hover:text-gray-500 font-poppins" href="#">Beranda</a></li>
+                <li class="text-gray-300">
+
+                </li>
+                <li><a class="text-sm text-blue-600 font-bold font-poppins" href="#">Kategori Lomba</a></li>
+                <li class="text-gray-300">
+
+                </li>
+                <li><a class="text-sm text-gray-400 hover:text-gray-500 font-poppins" href="#">Panduan</a></li>
+                <li class="text-gray-300">
+
+                </li>
+                <li><a class="text-sm text-gray-400 hover:text-gray-500 font-poppins" href="#">Tentang</a></li>
+                <li class="text-gray-300">
+
+                </li>
+
+            </ul>
+
+            <a class="hidden lg:inline-block py-2 px-6  text-sm text-white font-bold rounded-full transition duration-200 bg-amber-500 transition ease-in-out delay-150 bg-amber-500 hover:-translate-y-1 hover:scale-110 hover:bg-amber-600 duration-300"
+                href="#">Daftar Sekarang</a>
+
+        </nav>
+        <div class="navbar-menu relative z-50 ">
+            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+            <nav
+                class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                <div class="flex items-center mb-8">
+                    <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                        <div class="">
+                            <img src="./asset/image/logosi.png" alt="" class="bg-amber-500  rounded-md ">
+                        </div>
+                    </a>
+                    <button class="navbar-close">
+                        <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-ungu"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <ul>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-ungu rounded font-poppins"
+                                href="#">Beranda</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-ungu rounded font-poppins"
+                                href="#">Kategori Lomba</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-ungu rounded font-poppins"
+                                href="#">Panduan</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-ungu rounded  font-poppins"
+                                href="#">Tentang</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="mt-auto">
+                    <div class="pt-6">
+                        <div class="px-8 py-3 bg-amber-500 rounded-full">
+                            <a href="#" class="text-white font-semibold bg-amber-500 font-poppins transition ease-in-out delay-150 bg-amber-500 hover:-translate-y-1 hover:scale-110 hover:bg-amber-600 duration-300">Daftar Sekarang</a>
+                        </div>
+                    </div>
+                    <p class="my-4 text-xs text-center text-gray-400">
+                        <span class="font-poppins">copyright © 2023 sistem informasi Universitas AMIKOM
+                            Yogyakarta</span>
+                    </p>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <section class="bg-ungu">
+        <!-- ... Navbar content ... -->
+    </section>
+    <!-- Akhir Navbar -->
+
+    <!-- Halaman Section -->
+    <section class=" bg-ungu px-8 ">
+        <div
+            class="container mx-auto w-full h-screen items-center grid grid-cols-1 md:grid-cols-2 gap-6 md:grid-cols-1 px-4 space-y-4 ">
+            <div class="mt-8 gap-8">
+                <h5
+                    class="text-white text-[10px] lg:text-[20px] bg-dear rounded-full lg:max-w-sm px-1 py-1 text-center outline outline-2 outline-offset-2 mb-4 font-semibold delay-[300ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-0" data-taos-offset="400">
+                    Dear Mahasiswa Sistem Informasi 😊</h5>
+                <div class="text-white w-full items-center justify-center mt-20 leading-loose  ">
+                    <h2 class=" text-medium space-y-4 mb-8 lg:max-w-xl md:text-3xl lg:text-4xl mb-4 delay-[300ms] duration-[1000ms] taos:translate-x-[-200px] taos:opacity-0 font-poppins"
+                        data-taos-offset="400">
+                        Gelar Karya Mahasiswa
+                        Sistem Informasi 2024
+                        Universitas Amikom
+                        Yogyakarta
+                    </h2>
+                    <p class="font-poppins lg:max-w-xl text-[10px] md:text-xl delay-[300ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-0" data-taos-offset="400">Raih hadiah jutaan dan peghargaan terbaik
+                        jadikan karyamu yang terbaik dan hebat!</p>
+                </div>
+
+                <div class="flex items-center text-center mt-10 gap-8 text-white ">
+                    <button class="bg-amber-500 text-white px-2 py-2  rounded-full  lg:px-6 lg:py-2 text-sm lg:text-md font-semibold transition ease-in-out delay-150 bg-amber-500 hover:-translate-y-1 hover:scale-110 hover:bg-amber-600 duration-300 delay-[300ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-0" data-taos-offset="400 ">Daftar
+                        Sekarang</button>
+                    <a href="" class=" ">
+                        <p class="underline underline-offset-1 font-poppins text-sm lg:text-md delay-[300ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-0" data-taos-offset="400">Baca Panduan</p>
+                    </a>
+                </div>
+            </div>
+            <div class="">
+                <img class="w-full  h-auto delay-[300ms] duration-[600ms] taos:translate-x-[200px] taos:opacity-0 " data-taos-offset="400" src="./asset/image/banner1.png" alt="Image" >
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Halaman Section -->
+
+
+    <!-- AWAL SYARAT PENDAFTARAN -->
+    <section>
+        <div class="container mx-auto w-full h-full items-center justify-center flex flex-col px-4 mb-80 mt-40">
+            <div class="text-center mt-8 mb-20">
+                <div>
+                    <h5 class="text-gray-400 font-poppins text-sm md:text-md lg:text-2xl font-semibold delay-[300ms] duration-[600ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="500">Syarat mengikuti
+                        Gelar Karya Mahasiswa</h5>
+                    <h1 class=" text-lg font-semibold font-poppins lg:text-4xl delay-[300ms] duration-[600ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="500">Syarat Pendaftaran</h1>
+                </div>
+            </div>
+
+            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                <div class="card bg-white p-4 rounded-md  delay-[300ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-0"
+                    data-taos-offset="400">
+                    <div class="text-center ">
+                        <div class="w-full text-center items-center flex justify-center">
+                            <img src="./asset/image/syarat1.png" alt="" class="text-center w-20 h-20 mb-4 glowing">
+                        </div>
+                        <h5 class=" font-poppins  sm:text-sm lg:text-2xl font-semibold mb-2">Mahasiswa Aktif</h5>
+                        <p class="font-poppins text-sm">Program Studi Sistem Informasi maksimal telah melewati semester
+                            ganjil 2023/2024</p>
+                    </div>
+
+                </div>
+                <div class="card bg-white p-4 rounded-md  delay-[300ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-0"
+                    data-taos-offset="400 ">
+                    <div class="text-center ">
+                        <div class="w-full text-center items-center flex justify-center">
+                            <img src="./asset/image/syarat2.svg" alt="" class="text-center w-20 h-20 mb-4 ">
+                        </div>
+                        <h5 class=" font-poppins sm:text-sm lg:text-2xl font-semibold mb-2">Individu atau Tim</h5>
+                        <p class="font-poppins text-sm">Terdiri dari minimal 1 mahasiswa (individu) atau maksimal 6
+                            (tim) mahasiswa per karya</p>
+                    </div>
+
+                </div>
+                <div class="card bg-white p-4 rounded-md  delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,200px,0)] taos:opacity-0"
+                    data-taos-offset="300 ">
+                    <div class="text-center ">
+                        <div class="w-full text-center items-center flex justify-center">
+                            <img src="./asset/image/syarat3.png" alt="" class="text-center w-20 h-20 mb-4 ">
+                        </div>
+                        <h5 class=" font-poppins  sm:text-sm lg:text-2xl font-semibold mb-2">Mahasiswa Aktif</h5>
+                        <p class="font-poppins text-sm">Gratis. 1 mahasiswa atau 1 tim boleh lebih dari 1 karya</p>
+                    </div>
+
+                </div>
+                <div class="card bg-white p-4 rounded-md  delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,200px,0)] taos:opacity-0"
+                    data-taos-offset="300 ">
+                    <div class="text-center ">
+                        <div class="w-full text-center items-center flex justify-center">
+                            <img src="./asset/image/syarat4.png" alt="" class="text-center w-20 h-20 mb-4 ">
+                        </div>
+                        <h5 class=" font-poppins sm:text-sm lg:text-2xl font-semibold mb-2">Karya Original</h5>
+                        <p class="font-poppins text-sm">Karya Sendiri atau berasal dari project matakuliah</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AKHIR SYARAT PENDAFTARAN -->
+
+
+    <!-- AWAL AGENDA KEGIATAN -->
+    <section>
+        <div class="">
+            <div class="container mx-auto items-center text-center mt-10 mb-40 h-auto font-poppins">
+                <div class="mb-10 ">
+                    <div
+                        class="text-gray-400 text-sm md:text-md font-semibold font-poppins  leading-[34.20px]   lg:text-2xl delay-[300ms] duration-[600ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="500">
+                        Kegiatan Gelar Karya Mahasiswa
+                    </div>
+                    <div class="text-lg font-semibold  font-poppins lg:text-4xl delay-[300ms] duration-[600ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="500">Agenda Kegiatan</div>
+                </div>
+                <div class="">
+                    <div class="container">
+                        <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2  ">
+                            <!-- left -->
+                            <div class="flex flex-row-reverse md:contents">
+                                <div class=" col-end-5 p-4 rounded-xl my-4 ml-auto delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400 ">
+                                    <h3 class="font-semibold text-lg mb-1 ">13 November - 4 Desember 2023</h3>
+                                    <p class="leading-tight text-justify">
+                                        Submission
+                                    </p>
+                                </div>
+                                <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+                                    <div class="h-full w-6 flex items-center justify-center">
+                                        <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+                                    </div>
+                                    <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-400 ">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- right -->
+                            <div class="flex md:contents">
+                                <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+                                    <div class="h-full w-6 flex items-center justify-center">
+                                        <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+                                    </div>
+                                    <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-400 shadow">
+                                    </div>
+                                </div>
+                                <div class="col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+                                    <h3 class="font-semibold text-lg mb-1">12 Desember - 20 Desember</h3>
+                                    <p class="leading-tight text-justify">
+                                        penjurian tahap 1
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- left -->
+                            <div class="flex flex-row-reverse md:contents">
+                                <div class="col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400 ">
+                                    <h3 class="font-semibold text-lg mb-1 ">20 Desember 2023</h3>
+                                    <p class="leading-tight text-justify">
+                                        Pengumuman Finalis
+                                    </p>
+                                </div>
+                                <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+                                    <div class="h-full w-6 flex items-center justify-center">
+                                        <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+                                    </div>
+                                    <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-400 shadow">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- left -->
+                            <div class="flex flex-row-reverse md:contents">
+                                <div class=" col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+                                    <h3 class="font-semibold text-lg mb-1">22 Desember 2023</h3>
+                                    <p class="leading-tight text-justify">
+                                        penjurian Tahap 2 & Gelar Karya
+                                    </p>
+                                </div>
+                                <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+                                    <div class="h-full w-6 flex items-center justify-center">
+                                        <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+                                    </div>
+                                    <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-400 shadow">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- right -->
+                            <div class="flex md:contents">
+                                <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+                                    <div class="h-full w-6 flex items-center justify-center">
+                                        <div class="h-full w-1 bg-gray-400 pointer-events-none"></div>
+                                    </div>
+                                    <div class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-gray-400 shadow">
+                                    </div>
+                                </div>
+                                <div class=" col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400 ">
+                                    <h3 class="font-semibold text-lg mb-1 ">Tentative</h3>
+                                    <p class="leading-tight text-justify">
+                                        Awarding
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- AKHIR AGENDA KEGIATAN -->
+
+
+    <!-- FAQ Section -->
+    <section x-data="{
+    openFaq1: false, 
+    openFaq2: false, 
+    openFaq3: false, 
+    openFaq4: false, 
+    openFaq5: false, 
+    openFaq6: false,
+    openFaq7: false,
+    openFaq8: false,
+}" class="relative z-20 overflow-hidden bg-white dark:bg-dark pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] font-poppins mb-20">
+        <div class="container mx-auto px-10 text-center">
+            <div class="text-center mt-8 mb-20 delay-[300ms] duration-[600ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="500">
+                <div>
+                    <h5 class="text-gray-400 font-poppins text-sm md:text-md lg:text-2xl font-semibold">Terdapat 8
+                        kategori lomba</h5>
+                    <h1 class=" text-lg font-semibold font-poppins lg:text-4xl">Kategori Lomba</h1>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full px-4 lg:w-1/2 delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible" data-taos-offset="400">
+
+                    <div :class="{ 'bg-purple-600': openFaq1, 'bg-white': !openFaq1 }"
+                        class="w-full p-4 mb-8 rounded-[45px] shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8">
+                        <button class="flex w-full text-left faq-btn" @click="openFaq1 = !openFaq1">
+                            <div
+                                class="text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg">
+                                <svg :class="{ 'rotate-180': openFaq1, 'rotate-0': !openFaq1 }" width="22" height="22"
+                                    viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div :class="{ 'text-white': openFaq1, 'text-primary': !openFaq1 }" class="w-full">
+                                <h4 class="mt-1 text-lg font-semibold">
+                                    Business Plan ICT
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq1" class="faq-content pl-[62px]">
+                            <p class="py-3 text-base leading-relaxed text-white">
+                                Lomba Data Sains adalah kompetisi yang dirancang untuk mendorong peserta untuk
+                                memanfaatkan kekuatan analisis data dan pemodelan statistik dalam
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible" data-taos-offset="400">
+
+                    <div :class="{ 'bg-purple-600': openFaq2, 'bg-white': !openFaq2 }"
+                        class="w-full p-4 mb-8 rounded-[45px] shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8">
+                        <button class="flex w-full text-left faq-btn" @click="openFaq2 = !openFaq2">
+                            <div
+                                class="text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg">
+                                <svg :class="{ 'rotate-180': openFaq2, 'rotate-0': !openFaq2 }" width="22" height="22"
+                                    viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div :class="{ 'text-white': openFaq2, 'text-primary': !openFaq2 }" class="w-full">
+                                <h4 class="mt-1 text-lg font-semibold">
+                                    UI/UX Design
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq2" class="faq-content pl-[62px]">
+                            <p class="py-3 text-base leading-relaxed text-white">
+                                Lomba Data Sains adalah kompetisi yang dirancang untuk mendorong peserta untuk
+                                memanfaatkan kekuatan analisis data dan pemodelan statistik dalam
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible" data-taos-offset="400">
+
+                    <div :class="{ 'bg-purple-600': openFaq3, 'bg-white': !openFaq3 }"
+                        class="w-full p-4 mb-8 rounded-[45px] shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8">
+                        <button class="flex w-full text-left faq-btn" @click="openFaq3 = !openFaq3">
+                            <div
+                                class="text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg">
+                                <svg :class="{ 'rotate-180': openFaq3, 'rotate-0': !openFaq3 }" width="22" height="22"
+                                    viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div :class="{ 'text-white': openFaq3, 'text-primary': !openFaq3 }" class="w-full">
+                                <h4 class="mt-1 text-lg font-semibold">
+                                    Bisnis Digital & FIntech
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq3" class="faq-content pl-[62px]">
+                            <p class="py-3 text-base leading-relaxed text-white">
+                                Lomba Data Sains adalah kompetisi yang dirancang untuk mendorong peserta untuk
+                                memanfaatkan kekuatan analisis data dan pemodelan statistik dalam
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible" data-taos-offset="400">
+
+                    <div :class="{ 'bg-purple-600': openFaq4, 'bg-white': !openFaq4 }"
+                        class="w-full p-4 mb-8 rounded-[45px] shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8">
+                        <button class="flex w-full text-left faq-btn" @click="openFaq4 = !openFaq4">
+                            <div
+                                class="text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg">
+                                <svg :class="{ 'rotate-180': openFaq4, 'rotate-0': !openFaq4 }" width="22" height="22"
+                                    viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div :class="{ 'text-white': openFaq4, 'text-primary': !openFaq4 }" class="w-full">
+                                <h4 class="mt-1 text-lg font-semibold">
+                                    Media Interaktif & AR/VR
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq4" class="faq-content pl-[62px]">
+                            <p class="py-3 text-base leading-relaxed text-white">
+                                Lomba Data Sains adalah kompetisi yang dirancang untuk mendorong peserta untuk
+                                memanfaatkan kekuatan analisis data dan pemodelan statistik dalam
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible" data-taos-offset="400">
+
+                    <div :class="{ 'bg-purple-600': openFaq5, 'bg-white': !openFaq5 }"
+                        class="w-full p-4 mb-8 rounded-[45px] shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8">
+                        <button class="flex w-full text-left faq-btn" @click="openFaq5 = !openFaq5">
+                            <div
+                                class="text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg">
+                                <svg :class="{ 'rotate-180': openFaq5, 'rotate-0': !openFaq5 }" width="22" height="22"
+                                    viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div :class="{ 'text-white': openFaq5, 'text-primary': !openFaq5 }" class="w-full">
+                                <h4 class="mt-1 text-lg font-semibold">
+                                    Pemrograman
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq5" class="faq-content pl-[62px]">
+                            <p class="py-3 text-base leading-relaxed text-white">
+                                Lomba Data Sains adalah kompetisi yang dirancang untuk mendorong peserta untuk
+                                memanfaatkan kekuatan analisis data dan pemodelan statistik dalam
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible" data-taos-offset="400">
+
+                    <div :class="{ 'bg-purple-600': openFaq6, 'bg-white': !openFaq6 }"
+                        class="w-full p-4 mb-8 rounded-[45px] shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8">
+                        <button class="flex w-full text-left faq-btn" @click="openFaq6 = !openFaq6">
+                            <div
+                                class="text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg">
+                                <svg :class="{ 'rotate-180': openFaq6, 'rotate-0': !openFaq6 }" width="22" height="22"
+                                    viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div :class="{ 'text-white': openFaq6, 'text-primary': !openFaq6 }" class="w-full">
+                                <h4 class="mt-1 text-lg font-semibold">
+                                    Multimedia
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq6" class="faq-content pl-[62px]">
+                            <p class="py-3 text-base leading-relaxed text-white">
+                                Lomba Data Sains adalah kompetisi yang dirancang untuk mendorong peserta untuk
+                                memanfaatkan kekuatan analisis data dan pemodelan statistik dalam
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible" data-taos-offset="400">
+
+                    <div :class="{ 'bg-purple-600': openFaq7, 'bg-white': !openFaq7 }"
+                        class="w-full p-4 mb-8 rounded-[45px] shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8">
+                        <button class="flex w-full text-left faq-btn" @click="openFaq7 = !openFaq7">
+                            <div
+                                class="text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg">
+                                <svg :class="{ 'rotate-180': openFaq7, 'rotate-0': !openFaq7 }" width="22" height="22"
+                                    viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div :class="{ 'text-white': openFaq7, 'text-primary': !openFaq7 }" class="w-full">
+                                <h4 class="mt-1 text-lg font-semibold">
+                                    Aplikasi & Sistem Informasi
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq7" class="faq-content pl-[62px]">
+                            <p class="py-3 text-base leading-relaxed text-white">
+                                Lomba Data Sains adalah kompetisi yang dirancang untuk mendorong peserta untuk
+                                memanfaatkan kekuatan analisis data dan pemodelan statistik dalam
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-1/2 delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible" data-taos-offset="400">
+
+                    <div :class="{ 'bg-purple-600': openFaq8, 'bg-white': !openFaq8 }"
+                        class="w-full p-4 mb-8 rounded-[45px] shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8">
+                        <button class="flex w-full text-left faq-btn" @click="openFaq8 = !openFaq8">
+                            <div
+                                class="text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg">
+                                <svg :class="{ 'rotate-180': openFaq8, 'rotate-0': !openFaq8 }" width="22" height="22"
+                                    viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div :class="{ 'text-white': openFaq8, 'text-primary': !openFaq8 }" class="w-full">
+                                <h4 class="mt-1 text-lg font-semibold">
+                                    Data Science
+                                </h4>
+                            </div>
+                        </button>
+                        <div x-show="openFaq8" class="faq-content pl-[62px]">
+                            <p class="py-3 text-base leading-relaxed text-white">
+                                Lomba Data Sains adalah kompetisi yang dirancang untuk mendorong peserta untuk
+                                memanfaatkan kekuatan analisis data dan pemodelan statistik dalam
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 right-0 z-[-1]">
+            <svg width="1440" height="886" viewBox="0 0 1440 886" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.5"
+                    d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z"
+                    fill="url(#paint0_linear)" />
+                <defs>
+                    <linearGradient id="paint0_linear" x1="1308.65" y1="1142.58" x2="602.827" y2="-418.681"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#3056D3" stop-opacity="0.36" />
+                        <stop offset="1" stop-color="#F5F2FD" stop-opacity="0" />
+                        <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+    </section>
+
+
+
+    <!-- AWAL BENEFIT KEGIATAN -->
+    <section class="px-10 font-poppins mb-40">
+        <div class="grid grid-cols-1 lg:grid-cols-2 w-full  container mx-auto items-center ">
+            <div class=" text-center items-center flex justify-center mt-20 delay-[300ms] duration-[600ms] taos:translate-x-[-100%] taos:invisible" data-taos-offset="400">
+                <img src="./asset/image/benefit.png" alt="">
+            </div>
+            <div class="max-w-auto">
+                <div class="mb-8 delay-[300ms] duration-[600ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="500">
+                    <h5 class="text-gray-400 font-poppins text-sm md:text-md lg:text-2xl font-semibold">FASILITAS</h5>
+                    <h1 class="text-lg font-semibold font-poppins lg:text-4xl"> Benefit Kegitan</h1>
+                </div>
+                <div class="flex  gap-2 mb-4 delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible" data-taos-offset="400">
+                    <img src="./asset/image/cheklist.svg" alt="">
+                    <p>Sertifikat untuk Nominator dan Pemenang</p>
+                </div>
+                <div class="flex  gap-2 mb-4 delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible" data-taos-offset="400">
+                    <img src="./asset/image/cheklist.svg" alt="">
+                    <p>Hadiah untuk Juara 1, 2, dan 3</p>
+                </div>
+                <div class="flex  gap-2 mb-4 delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible" data-taos-offset="400">
+                    <img src="./asset/image/cheklist.svg" alt="">
+                    <p>Kesempatan pembimbingan lomba tingkat selanjutnya</p>
+                </div>
+                <div class="flex  gap-2 mb-4 delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible" data-taos-offset="400">
+                    <img src="./asset/image/cheklist.svg" alt="">
+                    <p>Jika berhasil sampai lomba tingkat nasional, dapat di klaim sebagai
+                        jalur non skripsi jalur profesional dengan skema lomba</p>
+                </div>
+                <button class="bg-ungu text-white px-4 py-2 rounded-full transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 mt-6 delay-[300ms] duration-[600ms] taos:translate-x-[100%] taos:invisible" data-taos-offset="400">Daftar Sekarang</button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AKHIR BENEFIT KEGIATAN -->
+
+
+    <!-- PERTANYAAN UMUM -->
+    <section class="px-10 font-poppins mb-40">
+        <div class="mx-auto container mb-8 delay-[300ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-0" data-taos-offset="400">
+
+            <h5 class="text-gray-400 font-poppins text-sm md:text-md lg:text-2xl font-semibold">FORUM Q & A</h5>
+            <h1 class="text-lg font-semibold font-poppins lg:text-4xl"> Pertanyaan umum</h1>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 w-full  container mx-auto items-center gap-8 mb-20">
+
+
+            <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+                <p class="">Q: Ada Pertanyaan</p>
+                <p>A: Ada </p>
+                <hr>
+            </div>
+            <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+                <p>Q : Boleh tidak kalau 1 mahasiswa mendaftar ke 2 kategori?</p>
+                <p>A : Boleh, asalkan beda karya</p>
+                <hr>
+            </div>
+            <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+                <p>Q: Boleh tidak kalau salah satu tim berasal dari prodi lain?</p>
+                <p class=" text-red-600">A: Tidak Boleh</p>
+                <hr>
+            </div>
+            <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+                <p>Q: Apakah ada biaya pendaftaran?</p>
+                <p>A: Tidak Ada</p>
+                <hr>
+            </div>
+
+            <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+                <p>Q : Boleh tidak kalau salah satu tim berasal dari prodi lain?</p>
+                <p class=" text-red-600">A: Tidak Boleh</p>
+                <hr>
+            </div>
+            <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+                <p>Q: Berapa Jumlah Dosen Pendamping yang diperbolehkan?</p>
+                <p>A: Maksimal 1 dosen pendamping</p>
+                <hr>
+            </div>
+            <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+                <p> Q : Boleh tidak kalau 1 mahasiswa saja tanpa tim?</p>
+                <p>A: Boleh</p>
+                <hr>
+            </div>
+            <div class="delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+                <p>Q : Bagaimana jika tidak memiliki dosen pendamping?</p>
+                <p>A: Tidak apa-apa / Tidak harus memiliki dosen pendamping</p>
+                <hr>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+    <!-- PERTANYAAN UMUM -->
+
+
+    <!-- CONTACT PERSON -->
+    <section class="px-10   mt-40 font-poppins mb-60">
+        <div class="mx-auto container mb-8 delay-[300ms] duration-[600ms] taos:[transform:translate3d(-200px,0,0)_scale(0.6)] taos:opacity-0" data-taos-offset="400">
+            <h5 class="text-gray-400 font-poppins text-sm md:text-md lg:text-2xl font-semibold">KONTAK KAMI</h5>
+            <h1 class="text-lg font-semibold font-poppins lg:text-4xl">Contact Person</h1>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 w-full  container mx-auto items-center gap-2 mb-20 ">
+
+
+            <h1 class=" text-md lg:text-2xl text-gray-400 font-semibold delay-[300ms] duration-[600ms] taos:translate-y-[-100%] taos:invisible" data-taos-offset="500">Pak Fajri (081327011668)</h1>
+            <a href=""
+                class="rounded-full bg-ungu w-24 text-center text-white  px-2 py-2 lg:w-40 items-center ooutline outline-offset-0 ing-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(1.2)] taos:opacity-0" data-taos-offset="400">Hubungi</a>
+
+            <h1 class=" text-md lg:text-2xl text-gray-400 font-semibold delay-[300ms] duration-[600ms] taos:translate-y-[-100%] taos:invisible" data-taos-offset="500">Pak Yoga (085156727484)</h1>
+            <a href=""
+                class="rounded-full bg-ungu w-24 text-white text-center px-2 py-2 lg:w-40  items-center outline  outline-2 outline-offset-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 delay-[300ms] duration-[600ms] taos:[transform:translate3d(200px,0,0)_scale(1.2)] taos:opacity-0" data-taos-offset="400">Hubungi</a>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- AKHIR CONTACT PERSON  -->
+
+    <!-- AWAL FOOTER -->
+    <section class="bg-ungu font-poppins">
+        <div class="grid grid-cols-1 lg:grid-cols-2 w-full  container mx-auto items-center gap-2 px-10 ">
+            <img src="./asset/image/footer.svg" alt="" class="mt-8 ">
+
+            <div class="text-white font-poppins gap-2 ">
+                <h5 class="text-md lg:text-lg ">GELAR KARYA MAHASISWA</h5>
+                <h1 class="text-2xl md:text-3xl lg:text-5xl py-4">Are you ready to </h1>
+                <h1 class="text-2xl md:text-3xl lg:text-5xl">be the next champions?</h1>
+
+                <button class="rounded-full bg-amber-500 mt-8 px-4 py-2 mb-20 transition ease-in-out delay-150 bg-amber-500 hover:-translate-y-1 hover:scale-110 hover:bg-amber-600 duration-300"> Daftar Sekarang</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- AKHIR FOOTER -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const burger = document.querySelectorAll('.navbar-burger');
+            const menu = document.querySelectorAll('.navbar-menu');
+
+            if (burger.length && menu.length) {
+                for (var i = 0; i < burger.length; i++) {
+                    burger[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            // close
+            const close = document.querySelectorAll('.navbar-close');
+            const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+            if (close.length) {
+                for (var i = 0; i < close.length; i++) {
+                    close[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+
+            if (backdrop.length) {
+                for (var i = 0; i < backdrop.length; i++) {
+                    backdrop[i].addEventListener('click', function () {
+                        for (var j = 0; j < menu.length; j++) {
+                            menu[j].classList.toggle('hidden');
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
